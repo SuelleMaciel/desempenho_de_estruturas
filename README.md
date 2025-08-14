@@ -9,7 +9,6 @@ O objetivo é comparar o tempo  de execução de operações como inserção no 
 - **Java Collections Framework**
 
 ## Autores
-- @Horlanlacerda
-- @lethy-while
-- @SuelleMaciel
-
+- [@Horlanlacerda](https://github.com/Horlanlacerda)
+- [@lethy-while](https://github.com/lethy-while)
+- [@SuelleMaciel](https://github.com/SuelleMaciel)
