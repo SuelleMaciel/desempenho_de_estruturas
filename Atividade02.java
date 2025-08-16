@@ -1,5 +1,11 @@
 import java.util.*;
 
+/*
+    Para responder essa questão, utilizamos List<Integer> porque precisamos escolher o índice em que cada item será
+adicionado. A interface Collection<Integer> não seria útil nesse caso, já que o método "add" só recebe o item como
+parâmetro e não permite que eu especifique a posição de inserção.
+ */
+
 public class Atividade02 {
 
     public static void main(String[] args){
@@ -32,17 +38,6 @@ public class Atividade02 {
         double tempofinal3 = endtime3 - starttime3;
         System.out.printf("Tempo gasto para adicionar %d elementos no LinkedList: %f segundos%n", TOTAL_ELEMENTOS, tempofinal3/1000000000);
         
-        //----------------------------------------------
-        //TreeSet (100.000)
-
-        Set<Integer> conjunto_treeset = new TreeSet<>();
-        long starttime5 = System.nanoTime();
-        for(int i = 1 ; i <= TOTAL_ELEMENTOS; i++){
-            conjunto_treeset.add(i);
-        }
-        long endtime5 = System.nanoTime();
-        double tempofinal5 = endtime5 - starttime5;
-        System.out.printf("Tempo gasto para adicionar %d elementos no TreeSet: %f segundos%n", TOTAL_ELEMENTOS, tempofinal5/1000000000);
     }
     
 }
