@@ -4,10 +4,10 @@ public class Atividade01 {
 
     public static void main (String[] args){
 
-        List<Integer> lista_arraylist = new ArrayList<>();
-        List<Integer> lista_linkedlist = new LinkedList<>();
-        Set<Integer> conjunto_treeset = new TreeSet<>();
-        Set<Integer> conjunto_hashset = new HashSet<>();
+        Collection<Integer> lista_arraylist = new ArrayList<>();
+        Collection<Integer> lista_linkedlist = new LinkedList<>();
+        Collection<Integer> conjunto_treeset = new TreeSet<>();
+        Collection<Integer> conjunto_hashset = new HashSet<>();
 
         int TOTAL_ELEMENTOS1 = 100000;
         int TOTAL_ELEMENTOS2 = 250000;
@@ -16,14 +16,11 @@ public class Atividade01 {
         long starttime;
         long endtime;
 
-        
 
         //----------------- TESTES COM 100.000: -----------------
 
 
-
         System.out.println("\n" + " ".repeat(12) + "TESTE PARA UMA MASSA DE DADOS = 100.000\n");
-
 
 
         //----------------------------------------------
@@ -119,13 +116,10 @@ public class Atividade01 {
         System.out.printf("Tempo gasto para verificar o contains() no HashSet: %f segundos%n", tempofinal_contains4/1000000000);
 
 
-
         //----------------- TESTES COM 250.000: -----------------
 
 
-
         System.out.println("\n" + " ".repeat(12) + "TESTE PARA UMA MASSA DE DADOS = 250.000\n");
-
 
 
         //----------------------------------------------
@@ -221,13 +215,10 @@ public class Atividade01 {
         System.out.printf("Tempo gasto para verificar o contains() no HashSet: %f segundos%n", tempofinal_contains8/1000000000);
 
 
-
         //----------------- TESTES COM 500.000: -----------------
 
 
-
         System.out.println("\n" + " ".repeat(12) + "TESTE PARA UMA MASSA DE DADOS = 500.000\n");
-
 
 
         //----------------------------------------------
