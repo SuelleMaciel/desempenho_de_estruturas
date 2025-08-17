@@ -9,59 +9,122 @@ parâmetro e não permite que eu especifique a posição de inserção.
 public class Atividade02 {
 
     public static void main(String[] args){
+
+        List<Integer> lista_arraylist = new ArrayList<>();
+        List<Integer> lista_linkedlist = new LinkedList<>();
+
+        int TOTAL_ELEMENTOS1 = 100000;
+        int TOTAL_ELEMENTOS2 = 250000;
+        int TOTAL_ELEMENTOS3 = 500000;
+
+        long starttime;
+        long endtime;
+
+
+
+        //----------------- TESTES COM 100.000: -----------------
+
+
+
+        System.out.println("\n" + " ".repeat(12) + "TESTE PARA UMA MASSA DE DADOS = 100.000\n");
+
+
+
         //----------------------------------------------
         //ArrayList (100.000)
 
-        int TOTAL_ELEMENTOS = 100000;
+        lista_arraylist = new ArrayList<>();
 
-        List<Integer> lista_arraylist = new ArrayList<>();
-
-        long starttime1 = System.nanoTime();
-        for(int i = 1; i <= TOTAL_ELEMENTOS; i++){
+        starttime = System.nanoTime();
+        for(int i = 1; i <= TOTAL_ELEMENTOS1; i++){
             lista_arraylist.add(0,i);
         }
-        long endtime1 = System.nanoTime();
-        double tempofinal1 = endtime1 - starttime1;
-        System.out.printf("Tempo gasto para adicionar %d no inicio do ArrayList: %f segundos%n", TOTAL_ELEMENTOS, tempofinal1/1000000000);
+        endtime = System.nanoTime();
+        double tempofinal1 = endtime - starttime;
+        System.out.printf("Tempo gasto para adicionar %d no inicio do ArrayList: %f segundos%n", TOTAL_ELEMENTOS1, tempofinal1/1000000000);
 
         //----------------------------------------------
         //LinkedList (100.000)
 
-        List<Integer> lista_linkedlist = new LinkedList<>();
-        long starttime2 = System.nanoTime();
-        for(int i = 1 ; i <= TOTAL_ELEMENTOS; i++){
-            lista_linkedlist.add(0, i);
+        lista_linkedlist = new LinkedList<>();
+
+        starttime = System.nanoTime();
+        for(int i = 1; i <= TOTAL_ELEMENTOS1; i++){
+            lista_arraylist.add(0,i);
         }
-        long endtime2 = System.nanoTime();
-        double tempofinal2 = endtime2 - starttime2;
-        System.out.printf("Tempo gasto para adicionar %d elementos no LinkedList: %f segundos%n", TOTAL_ELEMENTOS, tempofinal2/1000000000);
+        endtime = System.nanoTime();
+        double tempofinal2 = endtime - starttime;
+        System.out.printf("Tempo gasto para adicionar %d no inicio do LinkedList: %f segundos%n", TOTAL_ELEMENTOS1, tempofinal2/1000000000);
+
+
+
+        //----------------- TESTES COM 250.000: -----------------
+
+
+
+        System.out.println("\n" + " ".repeat(12) + "TESTE PARA UMA MASSA DE DADOS = 250.000\n");
+
+
+
+        //----------------------------------------------
+        //ArrayList (250.000)
+
+        lista_arraylist = new ArrayList<>();
+
+        starttime = System.nanoTime();
+        for(int i = 1; i <= TOTAL_ELEMENTOS2; i++){
+            lista_arraylist.add(0,i);
+        }
+        endtime = System.nanoTime();
+        double tempofinal3 = endtime - starttime;
+        System.out.printf("Tempo gasto para adicionar %d no inicio do LinkedList: %f segundos%n", TOTAL_ELEMENTOS2, tempofinal3/1000000000);
+
+        //----------------------------------------------
+        //LinkedList (250.000)
+
+        lista_linkedlist = new LinkedList<>();
+
+        starttime = System.nanoTime();
+        for(int i = 1; i <= TOTAL_ELEMENTOS2; i++){
+            lista_arraylist.add(0,i);
+        }
+        endtime = System.nanoTime();
+        double tempofinal4 = endtime - starttime;
+        System.out.printf("Tempo gasto para adicionar %d no inicio do LinkedList: %f segundos%n", TOTAL_ELEMENTOS2, tempofinal4/1000000000);
+
+
+
+        //----------------- TESTES COM 500.000: -----------------
+
+
+
+        System.out.println("\n" + " ".repeat(12) + "TESTE PARA UMA MASSA DE DADOS = 500.000\n");
+
+
 
         //----------------------------------------------
         //ArrayList (500.000)
+        lista_arraylist = new ArrayList<>();
 
-        int TOTAL_ELEMENTOS2 = 500000;
-        List<Integer> lista_arraylist_500k = new ArrayList<>();
-
-        long starttime3 = System.nanoTime();
-        for(int i = 1; i <= TOTAL_ELEMENTOS2; i++){
-            lista_arraylist_500k.add(0,i);
+        starttime = System.nanoTime();
+        for(int i = 1; i <= TOTAL_ELEMENTOS3; i++){
+            lista_arraylist.add(0,i);
         }
-        long endtime3 = System.nanoTime();
-        double tempofinal3 = endtime3 - starttime3;
-        System.out.printf("Tempo gasto para adicionar %d no inicio do ArrayList: %f segundos.%n",TOTAL_ELEMENTOS2, tempofinal3/1000000000);
+        endtime = System.nanoTime();
+        double tempofinal5 = endtime - starttime;
+        System.out.printf("Tempo gasto para adicionar %d no inicio do ArrayList: %f segundos%n", TOTAL_ELEMENTOS3, tempofinal5/1000000000);
 
         //----------------------------------------------
         //LinkedList (500.000)
 
-        List<Integer> lista_linkedlist_500k = new LinkedList<>();
-        long starttime4 = System.nanoTime();
-        for (int i = 1; i <= TOTAL_ELEMENTOS2; i++){
-            lista_linkedlist_500k.add(0,i);
-        }
-        long endtime4 = System.nanoTime();
-        double tempofinal4 = endtime4 - starttime4;
-        System.out.printf("Tempo gasto para adicionar %d no início do LinkedList: %f segundos.%n", TOTAL_ELEMENTOS2, tempofinal4/1000000000);
+        lista_linkedlist = new LinkedList<>();
 
+        starttime = System.nanoTime();
+        for(int i = 1; i <= TOTAL_ELEMENTOS3; i++){
+            lista_arraylist.add(0,i);
+        }
+        endtime = System.nanoTime();
+        double tempofinal6 = endtime - starttime;
+        System.out.printf("Tempo gasto para adicionar %d no inicio do LinkedList: %f segundos%n", TOTAL_ELEMENTOS3, tempofinal6/1000000000);
     }
-    
 }
